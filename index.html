@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Canvas Automation Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container row">
+      <div class="brand">Canvas Automation Portfolio</div>
+      <nav class="nav">
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1>Canvas Automations that simplify workflows and save time</h1>
+          <p class="muted">
+            I build practical automations that save faculty and staff hours every week: from creating assignments
+            and discussion boards to converting rubrics and validating grades.
+          </p>
+          <div class="chips">
+            <span class="chip chip-indigo">Python</span>
+            <span class="chip chip-sky">Selenium</span>
+            <span class="chip chip-emerald">Automation</span>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="blob blob-a"></div>
+          <div class="blob blob-b"></div>
+          <div class="blob blob-c"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="container">
+      <h2>Featured Canvas Automations</h2>
+      <div id="grid" class="grid"></div>
+    </section>
+
+    <section id="about" class="container">
+      <h2>About This Work</h2>
+      <div class="cards row">
+        <div class="card">
+          <h3>Principles</h3>
+          <ul>
+            <li>Automate repetitive Canvas workflows.</li>
+            <li>Prioritize reliability, logs, and rollback options.</li>
+            <li>Keep configurations human-readable and adaptable.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Tooling</h3>
+          <p>Python and Selenium are the foundation of these automations, designed to work within Canvas UI workflows safely and efficiently.</p>
+        </div>
+        <div class="card">
+          <h3>Typical Outcomes</h3>
+          <p>5–10× faster setup, fewer manual errors, and consistent results across multiple Canvas courses.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="container">
+      <h2>Get in touch</h2>
+      <p>Email: <a href="mailto:automatemyjobtasks@gmail.com">automatemyjobtasks@gmail.com</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container row">
+      <div>© <span id="year"></span> All rights reserved.</div>
+      <div class="nav"><a href="#about">About</a><a href="#projects">Projects</a><a href="#contact">Contact</a></div>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <dialog id="modal">
+    <div class="modal-content">
+      <button id="closeBtn" class="icon-btn" aria-label="Close">✕</button>
+      <h3 id="mTitle"></h3>
+      <div class="modal-media">
+        <img id="mImage" alt="preview" />
+      </div>
+      <p id="mDetails" class="muted"></p>
+
+      <div class="actions">
+        <a id="fiverrBtn" class="btn" href="#" target="_blank" rel="noopener">View on Fiverr</a>
+      </div>
+
+      <div class="thumbs" id="mThumbs"></div>
+
+      <div class="uploader">
+        <label class="btn">
+          <input id="fileInput" type="file" accept="image/*" multiple hidden />
+          Upload images
+        </label>
+        <span class="note">Local preview only (clears on refresh)</span>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
